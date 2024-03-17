@@ -1,13 +1,20 @@
 import React from "react";
 import Banner from "./Banner";
+import TagLine from "./TagLine";
+import Services from "./Services";
+import Footer from "./Footer";
+import Client from "./Client";
+import Connect from "./Connect";
 
 function Home() {
   return (
     <>
       <Banner />
-      <div className="flex justify-center items-center h-screen text-4xl font-bold">
-        Other content will appear here
-      </div>
+      <TagLine />
+      <Services />
+      <Connect />
+      <Client />
+      <Footer />
     </>
   );
 }

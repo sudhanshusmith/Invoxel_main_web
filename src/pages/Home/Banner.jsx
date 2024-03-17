@@ -7,7 +7,7 @@ import backgroundVideo from "../../assets/home/bg.mp4";
 export function Model(props) {
   const { nodes, materials } = useGLTF("/obj3d.glb");
   return (
-    <motion.group {...props} dispose={null} scale={0.045}>
+    <motion.group {...props} dispose={null} scale={0.049}>
       <mesh
         geometry={nodes["Cylinder001_Material_#2_0"].geometry}
         material={materials.Material_2}
@@ -29,7 +29,7 @@ function Banner() {
       >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
-      <div className="absolute top-[5rem] right-[20rem] z-10 h-72 w-72 ">
+      <div className="absolute top-[10rem] right-[0rem] xl:top-[5rem] xl:right-[20rem] z-10 h-52 w-52 xl:h-72  xl:w-72 ">
         <Canvas>
           <ambientLight intensity={0.8} />
           <pointLight position={[10, 10, 50]} />
