@@ -8,6 +8,10 @@ import Connect from "./Connect";
 import Hero from "./Hero/Carousel";
 import Navbar from "../../components/Navbar/Navbar";
 import Video from "./Video/Video";
+import About from "./About";
+import Quote from "../../components/Quote";
+import Carrer from "./Carrer";
+import Feedback from "./Feedback";
 
 function Home() {
   return (
@@ -17,8 +21,12 @@ function Home() {
       {/* <Banner /> */}
       <TagLine />
       <Video />
+      <About />
       <Services />
+      <Quote text1="MERGING" text2="REALITIES" />
       <Connect />
+      <Carrer />
+      <Feedback />
       <Client />
       <Footer />
     </>

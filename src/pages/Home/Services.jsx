@@ -7,7 +7,7 @@ import service_right_image from "../../assets/home//service right image.png";
 function Services() {
   return (
     <div>
-      <Heading text="Services" alignment="left" />
+      <Heading text="SERVICES" alignment="left" />
       <ServiceCard
         image={service_left_image}
         alignment="left"

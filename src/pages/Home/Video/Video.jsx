@@ -28,7 +28,7 @@ function Video() {
 
   return (
     <div className="flex justify-center">
-      <div className="video-container mt-[-10px] mb-16 xl:w-[50rem]">
+      <div className="video-container mt-[-10px] mb-16 xl:w-[full]">
         <video
           ref={videoRef}
           controls
