@@ -57,14 +57,14 @@ function Navbar() {
                 </Button>
               </Link>
 
-              <Link to="/" className="flex">
+              <a href="#services" className="flex">
                 <Button
                   color="inherit"
                   sx={{ display: { xs: "none", lg: "block" } }}
                 >
                   SERVICES{" "}
                 </Button>
-              </Link>
+              </a>
 
               <Link to="/" className="flex">
                 <Button
@@ -135,23 +135,23 @@ function Navbar() {
                   </Button>
                 </Link>
 
-                <Link to="/">
+                <a href="#services">
                   <Button color="inherit" onClick={closeDrawer}>
                     SERVICES
                   </Button>
-                </Link>
+                </a>
 
-                <Link to="/">
+                <a href="#presence">
                   <Button color="inherit" onClick={closeDrawer}>
                     OUR PRESENCE{" "}
                   </Button>
-                </Link>
+                </a>
 
-                <Link to="/">
+                <a href="#contact">
                   <Button color="inherit" onClick={closeDrawer}>
                     CONTACT{" "}
                   </Button>
-                </Link>
+                </a>
               </Stack>
             </Drawer>
           </Toolbar>

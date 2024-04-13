@@ -5,8 +5,8 @@ import line from "../../../assets/projects/line.png";
 
 function Services() {
   return (
-    <>
-      <div className="font-bold text-4xl lg:text-5xl mt-10 xl:mt-16 text-center lg:text-center">
+    <div id="services">
+      <div className="font-bold text-4xl lg:text-5xl mt-20 xl:mt-16 text-center lg:text-center">
         {"Services".toUpperCase()}
       </div>
 
@@ -31,7 +31,7 @@ function Services() {
           </>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

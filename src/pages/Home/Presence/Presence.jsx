@@ -7,7 +7,10 @@ import line from "../../../assets/projects/line.png";
 function Presence() {
   return (
     <>
-      <div className="font-bold text-4xl lg:text-5xl mt-10 xl:mt-16 text-center lg:text-center">
+      <div
+        id="presence"
+        className="font-bold text-4xl lg:text-5xl mt-10 xl:mt-16 text-center lg:text-center"
+      >
         {"Our Presence".toUpperCase()}
       </div>
 
