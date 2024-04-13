@@ -4,11 +4,23 @@ import "./index.css";
 import Home from "./pages/Home/Home";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Project from "./pages/Project/Project";
+import Root from "./root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/projects/:pid",
+        element: <Project />,
+      },
+    ],
   },
 ]);
 

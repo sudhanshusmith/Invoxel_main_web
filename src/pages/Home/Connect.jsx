@@ -2,7 +2,7 @@ import React from "react";
 
 function Connect() {
   return (
-    <div className="flex flex-col justify-center items-center my-16 px-6">
+    <div className="flex flex-col justify-center items-center my-16 px-6 bg-gradient-to-b from-[#276DFF] to-[#060434] py-10 text-white">
       <p className="uppercase text-3xl mb-3 font-light text-center">
         Looking for even more immersion?
       </p>

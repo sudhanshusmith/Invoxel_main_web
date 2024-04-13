@@ -30,18 +30,11 @@ function Navbar() {
   return (
     <>
       <div style={{ position: "absolute", top: "0px", right: "0px" }}>
-        <AppBar color="transparent">
-          <Toolbar
-            className=""
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(39,109,255,0.9) 0%, rgba(42,0,213,0.9) 100%)",
-              color: "white",
-            }}
-          >
+        <AppBar style={{ backgroundColor: "white", color: "black" }}>
+          <Toolbar className="">
             {/* Adding Company name or logo here  */}
             <Typography component="div" sx={{ flexGrow: 1 }}>
-              <img src={navlogo} className="h-10 pl-4"></img>
+              <img src={navlogo} className="h-8 ml-2"></img>
             </Typography>
 
             {/* Navigation for laptop */}
@@ -51,7 +44,7 @@ function Navbar() {
                   color="inherit"
                   sx={{ display: { xs: "none", lg: "block" } }}
                 >
-                  _HOME{" "}
+                  HOME{" "}
                 </Button>
               </NavLink>
 
@@ -60,7 +53,7 @@ function Navbar() {
                   color="inherit"
                   sx={{ display: { xs: "none", lg: "block" } }}
                 >
-                  _ABOUT US{" "}
+                  ABOUT US{" "}
                 </Button>
               </Link>
 
@@ -69,7 +62,7 @@ function Navbar() {
                   color="inherit"
                   sx={{ display: { xs: "none", lg: "block" } }}
                 >
-                  _SERVICES{" "}
+                  SERVICES{" "}
                 </Button>
               </Link>
 
@@ -78,7 +71,7 @@ function Navbar() {
                   color="inherit"
                   sx={{ display: { xs: "none", lg: "block" } }}
                 >
-                  _CARRER{" "}
+                  OUR PRESENCE{" "}
                 </Button>
               </Link>
 
@@ -87,7 +80,7 @@ function Navbar() {
                   color="inherit"
                   sx={{ display: { xs: "none", lg: "block" } }}
                 >
-                  _CONTACT{" "}
+                  CONTACT{" "}
                 </Button>
               </Link>
 
@@ -122,10 +115,9 @@ function Navbar() {
                 role="presentation"
                 spacing={1}
                 style={{
-                  background:
-                    "linear-gradient(0deg, rgba(39,109,255,0.8) 0%, rgba(42,0,213,0.9) 100%)",
+                  background: "#d9d9d9",
                   height: "100vh",
-                  color: "white",
+                  color: "black",
                   fontSize: "32px",
                   // border: `2px solid ${color.primary}`
                 }}
@@ -133,31 +125,31 @@ function Navbar() {
               >
                 <Link to="/">
                   <Button color="inherit" onClick={closeDrawer}>
-                    _HOME{" "}
+                    HOME{" "}
                   </Button>
                 </Link>
 
                 <Link to="/">
                   <Button color="inherit" onClick={closeDrawer}>
-                    _ABOUT US{" "}
+                    ABOUT US{" "}
                   </Button>
                 </Link>
 
                 <Link to="/">
                   <Button color="inherit" onClick={closeDrawer}>
-                    _SERVICES
+                    SERVICES
                   </Button>
                 </Link>
 
                 <Link to="/">
                   <Button color="inherit" onClick={closeDrawer}>
-                    _CARRER{" "}
+                    OUR PRESENCE{" "}
                   </Button>
                 </Link>
 
                 <Link to="/">
                   <Button color="inherit" onClick={closeDrawer}>
-                    _CONTACT{" "}
+                    CONTACT{" "}
                   </Button>
                 </Link>
               </Stack>

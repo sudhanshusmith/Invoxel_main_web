@@ -1,34 +1,30 @@
 import React from "react";
-import Banner from "./Banner";
-import TagLine from "./TagLine";
-import Services from "./Services";
-import Footer from "./Footer";
+import Footer from "../../components/Footer/Footer";
 import Client from "./Client";
 import Connect from "./Connect";
 import Hero from "./Hero/Carousel";
 import Navbar from "../../components/Navbar/Navbar";
 import Video from "./Video/Video";
-import About from "./About";
-import Quote from "../../components/Quote";
+import About from "./About/About";
+
+import CustomQuote from "../../components/Heading/CustomQuote";
+import Services from "./Services/Services";
+import Presence from "./Presence/Presence";
 import Carrer from "./Carrer";
-import Feedback from "./Feedback";
 
 function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
-      {/* <Banner /> */}
-      <TagLine />
+      <CustomQuote text="The art of digitization" />
       <Video />
       <About />
       <Services />
-      <Quote text1="MERGING" text2="REALITIES" />
       <Connect />
+      <Presence />
+      <CustomQuote text="Merging Realities" />
       <Carrer />
-      <Feedback />
-      <Client />
-      <Footer />
+      {/* <Client /> */}
     </>
   );
 }

@@ -6,7 +6,7 @@ import twitter from "../../assets/social/twitter.png";
 
 function Footer() {
   return (
-    <div className="bg-[#2600C5] text-white py-12 px-3">
+    <div className="bg-[#276dff] text-white py-12 px-3">
       <div className="flex justify-center items-center mb-5">
         <img src={fb} className="px-1 w-12 object-contain" />
         <img src={insta} className="px-1 w-12 object-contain" />
