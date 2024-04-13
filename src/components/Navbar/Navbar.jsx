@@ -48,7 +48,7 @@ function Navbar() {
                 </Button>
               </NavLink>
 
-              <Link to="/" className="flex">
+              <Link to="/about" className="flex">
                 <Button
                   color="inherit"
                   sx={{ display: { xs: "none", lg: "block" } }}
@@ -129,7 +129,7 @@ function Navbar() {
                   </Button>
                 </Link>
 
-                <Link to="/">
+                <Link to="/about">
                   <Button color="inherit" onClick={closeDrawer}>
                     ABOUT US{" "}
                   </Button>

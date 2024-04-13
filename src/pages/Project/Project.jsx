@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import gandhiData from "./data/gandhi";
+import rsm from "./data/rsm";
+import defence from "./data/defence";
+import amritpex from "./data/amritpex";
+import aero from "./data/aero";
 import ProjectHeading from "../../components/Heading/ProjectHeading";
 import NormalHeading from "../../components/Heading/NormalHeading";
 import section_img from "../../assets/projects/section_img.png";
@@ -26,7 +30,7 @@ function YTvideo(props) {
 
 function SectionContent(props) {
   return (
-    <div className="grid grid-cols-2 gap-4 px-5 my-8">
+    <div className="grid grid-cols-2 gap-4 px-5 my-8 xl:mx-40">
       {props.data.map((point, index) => (
         <>
           <div className="col-span-2 lg:col-span-1 mt-10 lg:mt-20 flex justify-end">
@@ -50,7 +54,7 @@ function SectionContent(props) {
 
 function GalleryImages(props) {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 gap-4 xl:mx-40">
       {props.images.map((image, index) => (
         <div className="col-span-2 lg:col-span-1 px-5 flex justify-center">
           <img src={section_img}></img>
@@ -67,6 +71,14 @@ function Project() {
   useEffect(() => {
     if (pid === "gandhi") {
       setData(gandhiData);
+    } else if (pid === "rsm") {
+      setData(rsm);
+    } else if (pid === "defence") {
+      setData(defence);
+    } else if (pid === "amritpex") {
+      setData(amritpex);
+    } else if (pid === "aero") {
+      setData(aero);
     } else {
       setData(null);
     }
