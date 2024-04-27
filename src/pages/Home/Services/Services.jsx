@@ -6,27 +6,37 @@ import line from "../../../assets/projects/line.png";
 function Services() {
   return (
     <div id="services">
-      <div className="font-bold text-4xl lg:text-5xl mt-20 xl:mt-16 text-center lg:text-center">
+      <div className="font-bold text-4xl lg:text-6xl mt-20 xl:mt-16 text-center lg:text-center">
         {"Services".toUpperCase()}
       </div>
 
-      <div className="grid grid-cols-2 gap-4 px-5 my-8">
+      <div className="grid grid-cols-2 gap-4 my-8 lg:mx-20">
         {data.map((point, index) => (
           <>
             <div
-              className={`col-span-2 lg:col-span-1 lg:mt-10 flex flex-col justify-${
-                index % 2 == 0 ? "start" : "end"
-              } xl:mx-20`}
+              className={`col-span-2 lg:col-span-1 mt-10 flex ${
+                index % 2 == 0 ? "lg:justify-end" : "lg:justify-start"
+              } `}
             >
-              <img src={section_img} className="xl:w-[30rem]"></img>
-              <div className="flex mt-4">
-                <img src={line} className="w-20"></img>
-                <p className="ml-[-4rem] text-xl lg:text-2xl pr-5">
-                  {point.title.toUpperCase()}
+              <div className="mx-8 lg:mx-0 lg:w-[80%]">
+                <img
+                  src={section_img}
+                  className=" shadow-md shadow-gray-500 rounded-lg"
+                ></img>
+                <div className="flex mt-4">
+                  <img src={line} className="w-20 "></img>
+                  <div className="ml-[-4rem]">
+                    <p className="text-lg pr-5">{point.title1.toUpperCase()}</p>
+                    <p className="text-lg pr-5 lg:mt-[-6px]">
+                      {point.title2.toUpperCase()}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="mt-3 roboto pl-20 ml-[-4rem] pr-4 text-sm">
+                  {point.description}
                 </p>
               </div>
-
-              <p className="mt-3 text-justify">{point.description}</p>
             </div>
           </>
         ))}

@@ -7,9 +7,9 @@ import add from "../../../assets/home/about/add.png";
 const aboutData = [
   {
     icon: building,
-    title: "Who we are",
+    title: "Digital Twins",
     description:
-      "We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create.",
+      "Work with our team to build custom Al Avatars for your organization, enabling role play training, sales leads, marketing and any other ideas in this exciting new era of computing.",
   },
   {
     icon: chat,

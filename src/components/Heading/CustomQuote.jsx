@@ -12,9 +12,14 @@ function CustomQuote({ text }) {
             src={leftquote}
             className="mt-[-30px] object-contain w-4 xl:w-7"
           />
-          <p className="font-extrabold text-2xl xl:text-5xl">
+          <p className="font-extrabold text-2xl xl:text-[3.2rem]">
             {arr.map((word, index) => (
-              <span key={index} className={`${index == 1 && "text-[#276dff]"}`}>
+              <span
+                key={index}
+                className={`${
+                  index == 1 && "text-[#276dff]"
+                } tracking-wide xl:tracking-wider`}
+              >
                 {word.toUpperCase() + " "}
               </span>
             ))}

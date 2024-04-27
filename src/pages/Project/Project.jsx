@@ -15,7 +15,7 @@ function YTvideo(props) {
   return (
     <div className="flex justify-center my-8 lg:my-12 px-5">
       <iframe
-        width="560"
+        width="900"
         height="315"
         src={props.iframeLink}
         title="YouTube video player"
@@ -36,15 +36,18 @@ function SectionContent(props) {
           <div className="col-span-2 lg:col-span-1 mt-10 lg:mt-20 flex justify-end">
             <img src={section_img}></img>
           </div>
-          <div className="col-span-2 lg:col-span-1 flex flex-col justify-end">
+          <div className="col-span-2 lg:col-span-1 flex flex-col justify-end lg:ml-10">
             <div className="flex">
               <img src={line} className="w-20"></img>
-              <p className="ml-[-4rem] text-xl lg:text-2xl pr-5">
-                {point.title.toUpperCase()}
-              </p>
+              <div className="ml-[-4rem] text-xl pr-5">
+                <p>{point.title1.toUpperCase()}</p>
+                <p>{point.title2.toUpperCase()}</p>
+              </div>
             </div>
 
-            <p className="mt-3">{point.description}</p>
+            <p className="mt-3 ml-[-4rem] pl-20 roboto text-sm">
+              {point.description}
+            </p>
           </div>
         </>
       ))}
@@ -56,8 +59,12 @@ function GalleryImages(props) {
   return (
     <div className="grid grid-cols-2 gap-4 xl:mx-40">
       {props.images.map((image, index) => (
-        <div className="col-span-2 lg:col-span-1 px-5 flex justify-center">
-          <img src={section_img}></img>
+        <div
+          className={`col-span-2 lg:col-span-1 px-5 flex ${
+            index % 2 === 0 ? "justify-end" : "justify-start"
+          }`}
+        >
+          <img src={section_img} className="w-[30rem]"></img>
         </div>
       ))}
     </div>
@@ -88,7 +95,7 @@ function Project() {
       {data ? (
         <div>
           <ProjectHeading text={data.title} />
-          <div className="px-5 lg:px-40">{data.description}</div>
+          <div className="px-5 lg:px-40 roboto">{data.description}</div>
           <YTvideo iframeLink={data.iframeLink}></YTvideo>
           <NormalHeading text={data.section.title} />
           <SectionContent data={data.section.data}></SectionContent>

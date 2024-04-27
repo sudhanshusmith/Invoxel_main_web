@@ -90,9 +90,9 @@ const Carousel = () => {
           </>
         ))}
 
-        <p className="carousel-title hidden md:block text-2xl">
+        {/* <p className="carousel-title hidden md:block text-2xl">
           {title[currentImageIndex]}
-        </p>
+        </p> */}
       </div>
       <div className="carousel-indicators">
         {images.map((_, index) => (

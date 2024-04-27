@@ -8,13 +8,13 @@ import NormalHeading from "../../../components/Heading/NormalHeading";
 function About() {
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex mx-5 lg:mx-0 lg:justify-center">
         <img src={line} className="w-20"></img>
         <p className="ml-[-4rem] text-xl lg:text-2xl">
           INVOXEL <br /> TECHNOLOGIES
         </p>
       </div>
-      <p className="mx-5 text-justify mt-8 xl:mx-36">
+      <p className="mx-5 text-justify mt-8 xl:mx-20 roboto">
         Invoxel Technologies, born from the esteemed halls of IIT Delhi and led
         by one of its distinguished alumni, stands as an innovative force
         specialising in crafting bespoke B2B Immersive solutions for global
@@ -36,16 +36,16 @@ function About() {
         applications across various verticals.
       </p>
       <CustomQuote text="Imagine Future" />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-y-8 mx-6 xl:mx-20">
         {data.map((point, index) => (
-          <div className="col-span-3 xl:col-span-1 flex flex-col mx-4">
+          <div className="col-span-3 xl:col-span-1 flex flex-col">
             <div className="flex items-center">
-              <img src={point.icon}></img>
-              <p className="font-semibold text-xl tracking-wider">
+              <img src={point.icon} className="w-10"></img>
+              <p className="font-semibold text-xl tracking-wide">
                 {point.title}
               </p>
             </div>
-            <p className="mx-8 text-justify">{point.description}</p>
+            <p className="ml-10 roboto text-sm">{point.description}</p>
           </div>
         ))}
       </div>
