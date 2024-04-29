@@ -13,33 +13,33 @@ const aboutData = [
   },
   {
     icon: chat,
-    title: "Who we are",
+    title: "Digital Twins",
     description:
-      "We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create.",
+      "Build digital twins of real locations and use them in our fully secure networked environments for education, collaboration and simulation training.",
   },
   {
     icon: person,
-    title: "Who we are",
+    title: "Remote collaboration",
     description:
-      "We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create.",
+      "ENGAGE provides a variety of tools for collaboration, such as immersive white boards, screen streaming, 3D virtual pens and spatial VOIP communications to enable more natural meetings and classes at distance.",
   },
   {
     icon: desktop,
-    title: "Who we are",
+    title: "User Management",
     description:
-      "We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create.",
+      "Add, edit or remove users from your organization account and provide them with access to content and files independently of each other.",
   },
   {
     icon: add,
-    title: "Who we are",
+    title: "Media straming",
     description:
-      "We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create.",
+      "Share all types of media including 2D, 3D, and 360 video as well as the integrated web browser and your computer desktop in all virtual environments.",
   },
   {
     icon: chat,
-    title: "Who we are",
+    title: "Large scale events",
     description:
-      "We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create. We are a team of passionate individuals who love to create.",
+      "Share all types of media including 2D, 3D, and 360 video as well as the integrated web browser and your computer desktop in all virtual environments.",
   },
 ];
 

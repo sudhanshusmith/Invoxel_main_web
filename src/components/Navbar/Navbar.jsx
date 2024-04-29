@@ -20,20 +20,19 @@ function Navbar() {
   }
 
   return (
-    <div className="flex z-10 bg-white h-14 items-center">
+    <div className="flex bg-white h-14 items-center sticky top-0 left-0 z-20">
       {/* Adding Company name or logo here  */}
       <div className="grow">
         <img src={navlogo} className="h-8 ml-6"></img>
       </div>
 
       {/* Navigation for laptop */}
-      <div className=" flex  gap-x-12 pr-6">
+      <div className=" flex  gap-x-12 pr-6 text-[#276dff]">
         <NavLink
           to="/"
           className="hidden lg:block"
           style={({ isActive }) => ({
-            color: isActive ? "#276dff" : "#000000",
-            fontWeight: isActive ? "bolder" : "normal",
+            textDecoration: isActive ? "underline" : "none",
           })}
         >
           HOME{" "}
@@ -42,8 +41,7 @@ function Navbar() {
           to="/about"
           className="hidden lg:block"
           style={({ isActive }) => ({
-            color: isActive ? "#276dff" : "#000000",
-            fontWeight: isActive ? "bolder" : "normal",
+            textDecoration: isActive ? "underline" : "none",
           })}
         >
           ABOUT US{" "}
@@ -68,7 +66,7 @@ function Navbar() {
 
       {/* Drawer Navigations are here  */}
       {isDrawerOpen && (
-        <div className=" w-[200px] absolute top-0 right-0 bg-[#d9d9d9] bg-opacity-80 rounded-bl-2xl">
+        <div className=" w-[200px] absolute top-0 right-0 bg-[#d9d9d9] bg-opacity-80 rounded-bl-2xl z-10 text-[#276dff]">
           <div
             className="flex justify-end"
             onClick={() => setIsDrawerOpen(false)}
@@ -80,8 +78,7 @@ function Navbar() {
               to="/"
               onClick={() => setIsDrawerOpen(false)}
               style={({ isActive }) => ({
-                color: isActive ? "#276dff" : "#000000",
-                fontWeight: isActive ? "bolder" : "normal",
+                textDecoration: isActive ? "underline" : "none",
               })}
             >
               HOME
@@ -90,8 +87,7 @@ function Navbar() {
               to="/about"
               onClick={() => setIsDrawerOpen(false)}
               style={({ isActive }) => ({
-                color: isActive ? "#276dff" : "#000000",
-                fontWeight: isActive ? "bolder" : "normal",
+                textDecoration: isActive ? "underline" : "none",
               })}
             >
               ABOUT US

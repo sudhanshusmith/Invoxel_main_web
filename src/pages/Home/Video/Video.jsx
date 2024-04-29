@@ -28,13 +28,13 @@ function Video() {
 
   return (
     <div className="flex justify-center">
-      <div className="video-container mt-[-10px]  px-5">
+      <div className="video-container mt-[-10px] px-5 flex justify-center">
         <video
           ref={videoRef}
           controls
           autoPlay={false} // Disable default autoplay
           muted // Mute the video to ensure audio plays
-          className="mb-16 xl:w-[72rem] rounded-2xl"
+          className="mb-16 xl:w-[80%] rounded-2xl"
         >
           <source src={product} type="video/mp4" />
           Your browser does not support the video tag.

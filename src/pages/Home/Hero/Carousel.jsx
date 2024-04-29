@@ -62,7 +62,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextClick();
-    }, 2000); // Auto slide interval set to 1 second
+    }, 6000); // Auto slide interval set to 1 second
 
     return () => clearInterval(interval); // Cleanup function to clear interval
   }, [currentImageIndex]); // Re-run effect whenever currentImageIndex changes
@@ -76,14 +76,14 @@ const Carousel = () => {
               <img
                 key={index}
                 src={obj.phone}
-                className="carousel-image "
+                className="carousel-image phone-image"
                 style={{ translate: `${-100 * currentImageIndex}%` }}
               />
             ) : (
               <img
                 key={index}
                 src={obj.desktop}
-                className="carousel-image "
+                className="carousel-image desktop-image"
                 style={{ translate: `${-100 * currentImageIndex}%` }}
               />
             )}
@@ -103,12 +103,14 @@ const Carousel = () => {
           ></span>
         ))}
       </div>
-      <button className="prev" onClick={handlePrevClick}>
+
+      {/* removing arrows */}
+      {/* <button className="prev" onClick={handlePrevClick}>
         &#10094;
       </button>
       <button className="next" onClick={handleNextClick}>
         &#10095;
-      </button>
+      </button> */}
     </div>
   );
 };
