@@ -4,6 +4,8 @@ import data from "./data";
 import line_white from "../../../assets/projects/line_white.png";
 import line from "../../../assets/projects/line.png";
 import NormalHeading from "../../../components/Heading/NormalHeading";
+import WhiteLineHeading from "../../../components/Card/WhiteLineHeading";
+import CardDescription from "../../../components/Card/CardDescription";
 
 function Presence() {
   return (
@@ -28,34 +30,18 @@ function Presence() {
                     />
 
                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out bg-gradient-to-b from-[#276DFF] to-[#060434] rounded-lg">
-                      <div className="flex mt-4">
-                        <img src={line_white} className="w-20 "></img>
-                        <div className="ml-[-4rem] text-white">
-                          <p className="text-lg pr-5">
-                            {point.title1.toUpperCase()}
-                          </p>
-                          <p className="text-lg pr-5 lg:mt-[-6px]">
-                            {point.title2.toUpperCase()}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex mt-4">
-                    <img src={line} className="w-20 "></img>
-                    <div className="ml-[-4rem]">
-                      <p className="text-lg pr-5">
-                        {point.title1.toUpperCase()}
-                      </p>
-                      <p className="text-lg pr-5 lg:mt-[-6px]">
-                        {point.title2.toUpperCase()}
-                      </p>
+                      <WhiteLineHeading
+                        text1={point.title1}
+                        text2={point.title2}
+                      />
                     </div>
                   </div>
 
-                  <p className="mt-3 roboto pl-20 ml-[-4rem] pr-4 text-sm">
-                    {point.description}
-                  </p>
+                  <CardDescription
+                    text1={point.title1}
+                    text2={point.title2}
+                    description={point.description}
+                  />
                 </div>
               </div>
             </>
