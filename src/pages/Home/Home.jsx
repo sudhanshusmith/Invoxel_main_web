@@ -12,6 +12,7 @@ import Services from "./Services/Services";
 import Presence from "./Presence/Presence";
 import Carrer from "./Carrer";
 import CustomPhoneQuote from "../../components/Heading/CustomPhoneQuote";
+import SeeinNews from "./News/SeeinNews";
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -59,6 +60,7 @@ function Home() {
       ) : (
         <CustomQuote text="Merging Realities" />
       )}
+      {/* <SeeinNews /> */}
       <Carrer />
       {/* <Client /> */}
     </>

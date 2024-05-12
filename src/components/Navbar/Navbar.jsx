@@ -2,8 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import { SlideDown } from "react-slidedown";
-import "react-slidedown/lib/slidedown.css";
+
 import navlogo from "../../assets/logo/invoxel.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import hamburger from "../../assets/icons/hamburger.svg";
