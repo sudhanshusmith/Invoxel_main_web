@@ -2,6 +2,8 @@ import React from "react";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { SlideDown } from "react-slidedown";
+import "react-slidedown/lib/slidedown.css";
 import navlogo from "../../assets/logo/invoxel.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import hamburger from "../../assets/icons/hamburger.svg";
@@ -10,6 +12,8 @@ import fb from "../../assets/social/fb.png";
 import insta from "../../assets/social/insta.png";
 import linkedin from "../../assets/social/linkedin.png";
 import twitter from "../../assets/social/twitter.png";
+
+import "./navbar.css";
 
 function Navbar() {
   // use state for Drawer opening & closing
@@ -20,19 +24,20 @@ function Navbar() {
   }
 
   return (
-    <div className="flex bg-white h-14 items-center sticky top-0 left-0 z-20">
+    <div className="flex bg-white h-14 items-center sticky top-0 left-0 z-20 drop-shadow-xl">
       {/* Adding Company name or logo here  */}
       <div className="grow">
         <img src={navlogo} className="h-8 ml-6"></img>
       </div>
 
       {/* Navigation for laptop */}
-      <div className=" flex  gap-x-12 pr-6 text-[#276dff]">
+      <div className=" flex  gap-x-12 pr-6 text-black">
         <NavLink
           to="/"
           className="hidden lg:block"
           style={({ isActive }) => ({
-            textDecoration: isActive ? "underline" : "none",
+            fontWeight: isActive ? "bold" : "normal",
+            color: isActive ? "#276dff" : "black",
           })}
         >
           HOME{" "}
@@ -41,7 +46,8 @@ function Navbar() {
           to="/about"
           className="hidden lg:block"
           style={({ isActive }) => ({
-            textDecoration: isActive ? "underline" : "none",
+            fontWeight: isActive ? "bold" : "normal",
+            color: isActive ? "#276dff" : "black",
           })}
         >
           ABOUT US{" "}
@@ -65,48 +71,75 @@ function Navbar() {
       </div>
 
       {/* Drawer Navigations are here  */}
+
       {isDrawerOpen && (
-        <div className=" w-[200px] absolute top-0 right-0 bg-[#d9d9d9] bg-opacity-80 rounded-bl-2xl z-10 text-[#276dff]">
+        <div className=" w-screen absolute top-0 right-0 bg-white z-10 drawer">
           <div
-            className="flex justify-end"
+            className="flex justify-between items-center pt-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            <img src={cross} alt="Close Drawer" className="w-14 p-4"></img>
+            <img src={navlogo} alt="LOGO" className="h-9 ml-6"></img>
+            <img
+              src={cross}
+              alt="Close Drawer"
+              className="w-14 h-14 p-4 object-cover"
+            ></img>
           </div>
           <div className="flex flex-col gap-y-5 px-6 py-8">
             <NavLink
               to="/"
               onClick={() => setIsDrawerOpen(false)}
               style={({ isActive }) => ({
-                textDecoration: isActive ? "underline" : "none",
+                fontWeight: isActive ? "bold" : "normal",
+                color: isActive ? "#276dff" : "black",
               })}
+              className="flex justify-end"
             >
               HOME
             </NavLink>
+            <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
             <NavLink
               to="/about"
               onClick={() => setIsDrawerOpen(false)}
               style={({ isActive }) => ({
-                textDecoration: isActive ? "underline" : "none",
+                fontWeight: isActive ? "bold" : "normal",
+                color: isActive ? "#276dff" : "black",
               })}
+              className="flex justify-end"
             >
               ABOUT US
             </NavLink>
-            <a href="#" onClick={() => setIsDrawerOpen(false)}>
+            <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
+            <a
+              href="#"
+              onClick={() => setIsDrawerOpen(false)}
+              className="flex justify-end"
+            >
               SERVICES
             </a>
-            <a href="#" onClick={() => setIsDrawerOpen(false)}>
+            <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
+            <a
+              href="#"
+              onClick={() => setIsDrawerOpen(false)}
+              className="flex justify-end"
+            >
               OUR PRESENCE
             </a>
-            <a href="#" onClick={() => setIsDrawerOpen(false)}>
+            <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
+            <a
+              href="#"
+              onClick={() => setIsDrawerOpen(false)}
+              className="flex justify-end"
+            >
               CONTACT
             </a>
+            <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
           </div>
           <div className="gap-x-4 flex justify-center mb-6">
-            <img src={fb} className="w-6 object-contain" />
-            <img src={insta} className="w-6 object-contain" />
-            <img src={linkedin} className="w-6 object-contain" />
-            <img src={twitter} className="w-6 object-contain" />
+            <img src={fb} className="w-10 object-contain" />
+            <img src={insta} className="w-10 object-contain" />
+            <img src={linkedin} className="w-10 object-contain" />
+            <img src={twitter} className="w-10 object-contain" />
           </div>
         </div>
       )}
