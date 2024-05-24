@@ -30,13 +30,12 @@ function Navbar() {
       </div>
 
       {/* Navigation for laptop */}
-      <div className=" flex  gap-x-12 pr-6 text-black">
+      <div className=" flex  gap-x-12 pr-6 text-[#276dff]">
         <NavLink
           to="/"
           className="hidden lg:block"
           style={({ isActive }) => ({
             fontWeight: isActive ? "bold" : "normal",
-            color: isActive ? "#276dff" : "black",
           })}
         >
           HOME{" "}
@@ -46,7 +45,6 @@ function Navbar() {
           className="hidden lg:block"
           style={({ isActive }) => ({
             fontWeight: isActive ? "bold" : "normal",
-            color: isActive ? "#276dff" : "black",
           })}
         >
           ABOUT US{" "}
@@ -90,7 +88,6 @@ function Navbar() {
               onClick={() => setIsDrawerOpen(false)}
               style={({ isActive }) => ({
                 fontWeight: isActive ? "bold" : "normal",
-                color: isActive ? "#276dff" : "black",
               })}
               className="flex justify-end"
             >
@@ -102,7 +99,6 @@ function Navbar() {
               onClick={() => setIsDrawerOpen(false)}
               style={({ isActive }) => ({
                 fontWeight: isActive ? "bold" : "normal",
-                color: isActive ? "#276dff" : "black",
               })}
               className="flex justify-end"
             >

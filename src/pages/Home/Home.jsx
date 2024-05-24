@@ -13,6 +13,7 @@ import Presence from "./Presence/Presence";
 import Carrer from "./Carrer";
 import CustomPhoneQuote from "../../components/Heading/CustomPhoneQuote";
 import SeeinNews from "./News/SeeinNews";
+import Testimonial from "./Testimonial/Testimonial";
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -60,7 +61,8 @@ function Home() {
       ) : (
         <CustomQuote text="Merging Realities" />
       )}
-      {/* <SeeinNews /> */}
+      <SeeinNews />
+      <Testimonial />
       <Carrer />
       {/* <Client /> */}
     </>
