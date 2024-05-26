@@ -1,5 +1,5 @@
 import React from "react";
-import section_img from "../../../assets/projects/section_img.png";
+// import section_img from "../../../assets/projects/section_img.png";
 import data from "./data";
 import line from "../../../assets/projects/line.png";
 import NormalHeading from "../../../components/Heading/NormalHeading";
@@ -21,7 +21,7 @@ function Services() {
               >
                 <div className="">
                   <img
-                    src={section_img}
+                    src={point.image}
                     className=" shadow-md shadow-gray-500 rounded-lg"
                   ></img>
                   <CardDescription

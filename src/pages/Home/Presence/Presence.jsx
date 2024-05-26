@@ -1,5 +1,5 @@
 import React from "react";
-import section_img from "../../../assets/projects/section_img.png";
+// import section_img from "../../../assets/projects/section_img.png";
 import data from "./data";
 import line_white from "../../../assets/projects/line_white.png";
 import line from "../../../assets/projects/line.png";
@@ -24,7 +24,7 @@ function Presence() {
                 <div className="">
                   <div class="relative group">
                     <img
-                      src={section_img}
+                      src={point.image}
                       alt="Your Image"
                       className="w-full h-auto shadow-md shadow-gray-500 rounded-lg"
                     />

@@ -9,28 +9,28 @@ const data = [
     title1: "Augmented",
     title2: "Reality",
     description:
-      "We offer 3D scanning services that help you to create a digital copy of your physical objects. Our 3D scanning services are widely used in various industries like automotive, aerospace, medical, and many more.",
+      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
   },
   {
     image: service2,
-    title1: "Augmented",
+    title1: "Virtual",
     title2: "Reality",
     description:
-      "We offer 3D scanning services that help you to create a digital copy of your physical objects. Our 3D scanning services are widely used in various industries like automotive, aerospace, medical, and many more.",
+      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
   },
   {
     image: service3,
-    title1: "Augmented",
-    title2: "",
+    title1: "Digital",
+    title2: "Walk",
     description:
-      "We offer 3D scanning services that help you to create a digital copy of your physical objects. Our 3D scanning services are widely used in various industries like automotive, aerospace, medical, and many more.",
+      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
   },
   {
     image: service4,
-    title1: "Augmented",
-    title2: "Reality",
+    title1: "Multiuser",
+    title2: "Interactive Surfaces",
     description:
-      "We offer 3D scanning services that help you to create a digital copy of your physical objects. Our 3D scanning services are widely used in various industries like automotive, aerospace, medical, and many more.",
+      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
   },
 ];
 
