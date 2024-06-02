@@ -26,7 +26,7 @@ function Presence() {
                     <img
                       src={point.image}
                       alt="Your Image"
-                      className="w-full h-auto shadow-md shadow-gray-500 rounded-lg"
+                      className="w-full max-h-80 shadow-md shadow-gray-500 rounded-lg object-cover"
                     />
 
                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out bg-gradient-to-b from-[#276DFF] to-[#060434] rounded-lg">
