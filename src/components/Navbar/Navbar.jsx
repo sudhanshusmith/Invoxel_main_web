@@ -70,7 +70,7 @@ function Navbar() {
       {/* Drawer Navigations are here  */}
 
       {isDrawerOpen && (
-        <div className=" w-screen absolute top-0 right-0 bg-white z-10 drawer">
+        <div className=" w-screen absolute top-0 right-0 bg-white bg-opacity-80 z-10 drawer">
           <div
             className="flex justify-between items-center pt-2"
             onClick={() => setIsDrawerOpen(false)}
