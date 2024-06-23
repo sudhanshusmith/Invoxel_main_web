@@ -19,13 +19,7 @@ const Carousel = () => {
     { desktop: gallery4, phone: galleryp4 },
     { desktop: gallery5, phone: galleryp5 },
   ];
-  const title = [
-    "Step into a digital playground of circuits and gears, where hands-on learning meets the limitless possibilities of virtual reality simulations.",
-    "Transport students beyond the classroom with immersive VR simulations, revolutionizing education through hands-on experiential learning.",
-    "Immerse yourself in a virtual realm of electronics and machinery, where learning meets innovation through interactive simulations and hands-on exploration.",
-    "Immerse yourself in a virtual realm of electronics and machinery, where learning meets innovation through interactive simulations and hands-on exploration.",
-    "Transport students beyond the classroom with immersive VR simulations, revolutionizing education through hands-on experiential learning.",
-  ];
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
