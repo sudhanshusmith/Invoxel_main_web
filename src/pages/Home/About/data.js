@@ -3,43 +3,45 @@ import chat from "../../../assets/home/about/chat.png";
 import person from "../../../assets/home/about/person.png";
 import desktop from "../../../assets/home/about/desktop.png";
 import add from "../../../assets/home/about/add.png";
+import twins from "../../../assets/home/about/twins.png";
+import { a } from "react-spring";
 
 const aboutData = [
   {
-    icon: building,
+    icon: twins,
     title: "Digital Twins",
     description:
-      "Work with our team to build custom Al Avatars for your organization, enabling role play training, sales leads, marketing and any other ideas in this exciting new era of computing.",
+      "Work with our team to build digital twins for your organization, enabling, virtual tours, training, marketing and any other ideas in this exciting new era of computing.",
+  },
+  {
+    icon: building,
+    title: "3D Scanning",
+    description:
+      "Build digital twins of real locations by scanning the entire site and use them in our fully secure networked environments for education, collaboration and simulation training.",
   },
   {
     icon: chat,
-    title: "Digital Twins",
+    title: "Remote Collaboration",
     description:
-      "Build digital twins of real locations and use them in our fully secure networked environments for education, collaboration and simulation training.",
+      "ENGAGE provides a variety of tools for collaboration, such as immersive content, screen streaming, 3D virtual digital walks and spatial communications to enable more natural demonstrations and experiences.",
   },
   {
     icon: person,
-    title: "Remote collaboration",
+    title: "User Management",
     description:
-      "ENGAGE provides a variety of tools for collaboration, such as immersive white boards, screen streaming, 3D virtual pens and spatial VOIP communications to enable more natural meetings and classes at distance.",
+      "Secure access by creating thresholds to Add, edit or remove data on the cloud and provide access to content and files independently of each other.",
   },
   {
     icon: desktop,
-    title: "User Management",
+    title: "Media Straming",
     description:
-      "Add, edit or remove users from your organization account and provide them with access to content and files independently of each other.",
+      "Share all types of media including 2D, 3D, and 360 video as well as the integrated web browser and your computer desktop in all virtual environments.",
   },
   {
     icon: add,
-    title: "Media straming",
+    title: "Large Scale Events",
     description:
-      "Share all types of media including 2D, 3D, and 360 video as well as the integrated web browser and your computer desktop in all virtual environments.",
-  },
-  {
-    icon: chat,
-    title: "Large scale events",
-    description:
-      "Share all types of media including 2D, 3D, and 360 video as well as the integrated web browser and your computer desktop in all virtual environments.",
+      "Expos, Exhibhitions and Trade Shows, we create Immersive Digital Pavillion with rich content and provide impactful and breathtaking experiences of virtual environments.",
   },
 ];
 

@@ -9,21 +9,21 @@ const data = [
     title1: "Augmented",
     title2: "Reality",
     description:
-      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
+      "We offer cost-effective psychophysics-based solutions. Using AR-powered tablets and wearables, we simulate plant equipment for training and provide on-the-job digital overlays with visual instructions and interactive guidance.",
   },
   {
     image: service2,
     title1: "Virtual",
     title2: "Reality",
     description:
-      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
+      "Using VR headsets and controllers, we simulate environments for efficient and immersive experiences of heritage sites . Our virtual reality solutions address your unique challenges with innovative and immersive technology.",
   },
   {
     image: service3,
     title1: "Digital",
     title2: "Walk",
     description:
-      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
+      "Every digital walk experience we deliver is tailored, unique and built with respect to digital twins of respected site. Our team of experts works to create a digital twin and comes up with solutions that will exceed your expectations.",
   },
   {
     image: service4,

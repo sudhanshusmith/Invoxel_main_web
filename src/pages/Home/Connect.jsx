@@ -33,9 +33,9 @@ function Connect() {
         transport your visitors into new realities for experiences they will not
         forget.
       </p>
-      <button className="bg-[#276DFF] text-white px-8 py-3 mt-4 font-light rounded-lg">
+      <a className="bg-[#276DFF] text-white px-8 py-3 mt-4 font-light rounded-lg" href="https://forms.gle/gSfDeeyYmhhbiK9R9" target="_blank">
         CONNECT
-      </button>
+      </a>
     </div>
   );
 }

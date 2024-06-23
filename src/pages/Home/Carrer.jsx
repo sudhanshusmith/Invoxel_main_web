@@ -11,9 +11,13 @@ function Carrer() {
         <p className="mt-3 font-semibold text-lg lg:mb-8">
           Ready to create impact?
         </p>
-        <button className="bg-[#276DFF] px-20 py-4 rounded-lg mt-3 text-sm">
+        <a
+          className="bg-[#276DFF] px-20 py-4 rounded-lg mt-3 text-sm"
+          href="https://forms.gle/DKxYTAfrgm6z9cmw5"
+          target="_blank"
+        >
           APPLY
-        </button>
+        </a>
       </div>
     </>
   );

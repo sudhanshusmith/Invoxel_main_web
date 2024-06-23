@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css"; // Assuming you have some CSS file for styling
-import gallery1 from "../../../assets/home/hero/desktop/1.jpg";
+import gallery1 from "../../../assets/home/hero/desktop/1.png";
 import gallery2 from "../../../assets/home/hero/desktop/2.png";
 import gallery3 from "../../../assets/home/hero/desktop/3.png";
 import gallery4 from "../../../assets/home/hero/desktop/4.png";
