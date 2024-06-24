@@ -43,7 +43,7 @@ function SeeinNews() {
   return (
     <>
       <NormalHeading text="See Us In the News" />
-      <div className="py-8 relative border">
+      <div className="py-8 relative">
         <Slider ref={sliderRef} {...settings}>
           {Array.from({ length: 4 }, (_, i) => i + 1).map((item) => (
             <div key={item} className="px-2 outline-none">
