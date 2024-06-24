@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "./Carousel.css"; // Assuming you have some CSS file for styling
+import React, { useState, useEffect, useRef } from "react";
+import Slider from "react-slick";
+import "./Carousel.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Assuming the imports for images are correct and paths are valid
 import gallery1 from "../../../assets/home/hero/desktop/1.png";
 import gallery2 from "../../../assets/home/hero/desktop/2.png";
 import gallery3 from "../../../assets/home/hero/desktop/3.png";
@@ -12,99 +17,62 @@ import galleryp4 from "../../../assets/home/hero/phone/4.png";
 import galleryp5 from "../../../assets/home/hero/phone/5.png";
 
 const Carousel = () => {
-  const images = [
-    { desktop: gallery1, phone: galleryp1 },
-    { desktop: gallery2, phone: galleryp2 },
-    { desktop: gallery3, phone: galleryp3 },
-    { desktop: gallery4, phone: galleryp4 },
-    { desktop: gallery5, phone: galleryp5 },
-  ];
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const sliderRef = useRef(null);
 
   useEffect(() => {
-    // Function to update state based on viewport width
-    function handleResize() {
+    const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
-    }
-
-    // Initial call to set state based on viewport width
-    handleResize();
-
-    // Event listener to update state on viewport width change
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup function to remove event listener
-    return () => {
-      window.removeEventListener("resize", handleResize);
     };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handlePrevClick = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    arrows: false,
+    beforeChange: (oldIndex, newIndex) => {
+      setCurrentImageIndex(newIndex); // Update current index on slide change
+    },
   };
 
-  const handleNextClick = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNextClick();
-    }, 6000); // Auto slide interval set to 1 second
-
-    return () => clearInterval(interval); // Cleanup function to clear interval
-  }, [currentImageIndex]); // Re-run effect whenever currentImageIndex changes
+  const imagesDesktop = [gallery1, gallery2, gallery3, gallery4, gallery5];
+  const imagesMobile = [galleryp1, galleryp2, galleryp3, galleryp4, galleryp5];
+  const images = isMobile ? imagesMobile : imagesDesktop;
 
   return (
     <div className="carousel-container">
-      <div className="carousel-images">
-        {images.map((obj, index) => (
-          <>
-            {isMobile ? (
-              <img
-                key={index}
-                src={obj.phone}
-                className="carousel-image phone-image"
-                style={{ translate: `${-100 * currentImageIndex}%` }}
-              />
-            ) : (
-              <img
-                key={index}
-                src={obj.desktop}
-                className="carousel-image desktop-image"
-                style={{ translate: `${-100 * currentImageIndex}%` }}
-              />
-            )}
-          </>
+      <Slider ref={sliderRef} {...settings}>
+        {images.map((src, index) => (
+          <div key={index} className="w-screen h-screen">
+            <img
+              src={src}
+              alt={`Slide ${index + 1}`}
+              className="object-cover"
+            />
+          </div>
         ))}
-
-        {/* <p className="carousel-title hidden md:block text-2xl">
-          {title[currentImageIndex]}
-        </p> */}
-      </div>
-      <div className="carousel-indicators">
+      </Slider>
+      <div className="carousel-indicators absolute bottom-0 left-1/2 transform -translate-x-1/2 px-5 py-2">
         {images.map((_, index) => (
           <span
             key={index}
-            className={index === currentImageIndex ? "active" : ""}
-            onClick={() => setCurrentImageIndex(index)}
+            className={`inline-block w-2 h-2 rounded-full mx-1 cursor-pointer ${
+              index === currentImageIndex ? "bg-[#276DFF]" : "bg-gray-400"
+            }`}
+            onClick={() => sliderRef.current.slickGoTo(index)}
           ></span>
         ))}
       </div>
-
-      {/* removing arrows */}
-      {/* <button className="prev" onClick={handlePrevClick}>
-        &#10094;
-      </button>
-      <button className="next" onClick={handleNextClick}>
-        &#10095;
-      </button> */}
     </div>
   );
 };
