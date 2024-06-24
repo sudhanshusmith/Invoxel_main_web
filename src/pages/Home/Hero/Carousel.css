@@ -1,12 +1,33 @@
-.carousel-container {
+/* .carousel-container {
   position: relative;
   width: 100%;
-}
+} */
 
-.carousel-indicators {
-  position: absolute; /* Adjusted to be at the bottom of the container */
-  bottom: -40px; /* Adjust this value based on your design needs */
+/* .carousel-indicators {
+  position: absolute;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10; /* Ensure it's above everything else if needed */
+  z-index: 10;
+} */
+
+.social-icons {
+  position: absolute;
+  top: 60%;
+  left: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  z-index: 20;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    display: none; /* Hide on mobile */
+  }
 }

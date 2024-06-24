@@ -16,6 +16,11 @@ import galleryp3 from "../../../assets/home/hero/phone/3.png";
 import galleryp4 from "../../../assets/home/hero/phone/4.png";
 import galleryp5 from "../../../assets/home/hero/phone/5.png";
 
+import fb from "../../../assets/social/fb-f.png";
+import insta from "../../../assets/social/insta-f.png";
+import linkedin from "../../../assets/social/linkedin-f.png";
+import twitter from "../../../assets/social/twitter-f.png";
+
 const Carousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -23,7 +28,7 @@ const Carousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     window.addEventListener("resize", handleResize);
@@ -50,7 +55,24 @@ const Carousel = () => {
   const images = isMobile ? imagesMobile : imagesDesktop;
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container relative">
+      {!isMobile && (
+        <div className="social-icons">
+          <a href="https://www.facebook.com/Invoxel" target="_blank">
+            <img src={fb} className="w-8 object-contain" />
+          </a>
+          <a href="https://www.instagram.com/invoxel" target="_blank">
+            <img src={insta} className="w-8 object-contain" />
+          </a>
+          <a href="https://www.linkedin.com/company/invoxel/" target="_blank">
+            <img src={linkedin} className="w-8 object-contain" />
+          </a>
+          <a href="https://x.com/invoxel" target="_blank">
+            <img src={twitter} className="w-8 object-contain" />
+          </a>
+        </div>
+      )}
+
       <Slider ref={sliderRef} {...settings}>
         {images.map((src, index) => (
           <div key={index} className="w-screen h-screen">
@@ -62,7 +84,7 @@ const Carousel = () => {
           </div>
         ))}
       </Slider>
-      <div className="carousel-indicators absolute bottom-0 left-1/2 transform -translate-x-1/2 px-5 py-2">
+      <div className="carousel-indicators absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2">
         {images.map((_, index) => (
           <span
             key={index}
