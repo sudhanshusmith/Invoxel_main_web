@@ -4,6 +4,7 @@ import NormalHeading from "../../../components/Heading/NormalHeading";
 import all_testimonials from "../../../assets/home/testimonial/all.png";
 import TestimaonialQuote from "../../../components/Heading/TestimaonialQuote";
 import testimonialData from "./data";
+import CollidingImg from "./CollidingImg";
 
 function Testimonial() {
   const [current, setCurrent] = useState(0);
@@ -18,7 +19,7 @@ function Testimonial() {
   return (
     <>
       <NormalHeading text="Testimonials" />
-      <img src={all_testimonials} />
+      <CollidingImg />
       <div className="mx-auto max-w-fit">
         <Fade key={current} duration={2000}>
           {" "}
