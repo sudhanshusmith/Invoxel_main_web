@@ -21,12 +21,12 @@ function Presence() {
                   index % 2 == 0 ? "end" : "start"
                 }`}
               >
-                <div className="">
-                  <div class="relative group">
+                <div className="w-full">
+                  <div class="relative group  ">
                     <img
                       src={point.image}
                       alt="Your Image"
-                      className="w-full max-h-80 shadow-md shadow-gray-500 rounded-lg object-cover"
+                      className="w-full max-h-90 shadow-md shadow-gray-500 rounded-lg object-cover"
                     />
 
                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out bg-gradient-to-b from-[#276DFF] to-[#060434] rounded-lg">
