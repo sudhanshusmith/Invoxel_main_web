@@ -9,7 +9,7 @@ import CardDescription from "../../../components/Card/CardDescription";
 
 function Presence() {
   return (
-    <div id="presence" className="">
+    <div id="presence" className="border border-white">
       <NormalHeading text="Our Presence" />
 
       <div className="flex justify-center">
