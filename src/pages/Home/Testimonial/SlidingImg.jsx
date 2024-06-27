@@ -2,7 +2,7 @@ import React from "react";
 import { testimonialImages } from "./data";
 
 const SlidingImg = () => {
-  const duplicateTimes = 10;
+  const duplicateTimes = 100;
   let images = [];
 
   for (let i = 0; i < duplicateTimes; i++) {
