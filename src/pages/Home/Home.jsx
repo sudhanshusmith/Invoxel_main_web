@@ -20,12 +20,13 @@ function Home() {
   const [isMobile, setIsMobile] = useState(false);
   const { pathname } = useLocation();
 
+  const { hash } = useLocation();
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' 
+      behavior: "smooth",
     });
-  }, [pathname]);
+  }, [pathname, hash]);
 
   useEffect(() => {
     function handleResize() {

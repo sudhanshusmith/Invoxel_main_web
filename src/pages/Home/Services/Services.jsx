@@ -7,7 +7,7 @@ import CardDescription from "../../../components/Card/CardDescription";
 
 function Services() {
   return (
-    <div id="services">
+    <div id="services" className="">
       <NormalHeading text="Services" />
 
       <div className="flex justify-center">

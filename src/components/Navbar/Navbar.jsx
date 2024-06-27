@@ -1,10 +1,10 @@
 import React from "react";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import navlogo from "../../assets/logo/invoxel.png";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import hamburger from "../../assets/icons/hamburger.svg";
 import cross from "../../assets/icons/cross.svg";
 import fb from "../../assets/social/fb.png";
@@ -17,6 +17,29 @@ import "./navbar.css";
 function Navbar() {
   // use state for Drawer opening & closing
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          // Option for scrollIntoView
+          const options = {
+            behavior: "smooth",
+            block: "start",
+          };
+          element.scrollIntoView(options);
+        }, 100); // Adjust the timeout as necessary or find a more dynamic way to ensure content is loaded
+      }
+    }
+  }, [hash]);
+
+  function closeDrawer() {
+    setIsDrawerOpen(false);
+  }
 
   function closeDrawer() {
     setIsDrawerOpen(false);
@@ -41,19 +64,19 @@ function Navbar() {
         >
           HOME{" "}
         </NavLink>
-        <NavLink
-          to="/about"
+        <a
+          href="/#about"
           className="hidden lg:block"
-          style={({ isActive }) => ({
-            fontWeight: isActive ? "bold" : "normal",
-          })}
+          // style={({ isActive }) => ({
+          //   fontWeight: isActive ? "bold" : "normal",
+          // })}
         >
           ABOUT US{" "}
-        </NavLink>
-        <a href="#" className="hidden lg:block">
+        </a>
+        <a href="/#services" className="hidden lg:block">
           SERVICES{" "}
         </a>
-        <a href="#" className="hidden lg:block">
+        <a href="/#presence" className="hidden lg:block">
           OUR PRESENCE{" "}
         </a>
         <a href="#contact" className="hidden lg:block">
@@ -98,18 +121,18 @@ function Navbar() {
             </NavLink>
             <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
             <NavLink
-              to="/about"
+              to="/#about"
               onClick={() => setIsDrawerOpen(false)}
-              style={({ isActive }) => ({
-                fontWeight: isActive ? "bold" : "normal",
-              })}
+              // style={({ isActive }) => ({
+              //   fontWeight: isActive ? "bold" : "normal",
+              // })}
               className="flex justify-end"
             >
               ABOUT US
             </NavLink>
             <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
             <a
-              href="#"
+              href="/#services"
               onClick={() => setIsDrawerOpen(false)}
               className="flex justify-end"
             >
@@ -117,7 +140,7 @@ function Navbar() {
             </a>
             <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
             <a
-              href="#"
+              href="/#presence"
               onClick={() => setIsDrawerOpen(false)}
               className="flex justify-end"
             >
@@ -125,7 +148,7 @@ function Navbar() {
             </a>
             <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
             <a
-              href="#"
+              href="#contact"
               onClick={() => setIsDrawerOpen(false)}
               className="flex justify-end"
             >

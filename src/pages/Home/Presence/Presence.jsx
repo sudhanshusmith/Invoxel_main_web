@@ -9,7 +9,7 @@ import CardDescription from "../../../components/Card/CardDescription";
 
 function Presence() {
   return (
-    <>
+    <div id="presence" className="">
       <NormalHeading text="Our Presence" />
 
       <div className="flex justify-center">
@@ -48,7 +48,7 @@ function Presence() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

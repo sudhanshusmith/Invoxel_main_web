@@ -28,7 +28,10 @@ function About() {
     };
   }, []);
   return (
-    <div className="flex flex-col items-center">
+    <div
+      id="about"
+      className="pt-16 flex flex-col items-center"
+    >
       <div className="w-[80%]">
         <div className="flex lg:justify-center">
           <BlackLineHeading text1="Invoxel" text2="Technologies" />

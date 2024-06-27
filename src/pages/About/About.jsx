@@ -32,13 +32,14 @@ function About() {
   }, []);
 
   const { pathname } = useLocation();
+  const { hash } = useLocation();
 
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  }, [pathname]);
+  }, [pathname, hash]);
   return (
     <div className="flex flex-col items-center">
       <div className="w-[80%]">
