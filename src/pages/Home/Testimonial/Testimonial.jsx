@@ -3,8 +3,8 @@ import { Fade } from "react-awesome-reveal";
 import NormalHeading from "../../../components/Heading/NormalHeading";
 import all_testimonials from "../../../assets/home/testimonial/all.png";
 import TestimaonialQuote from "../../../components/Heading/TestimaonialQuote";
-import testimonialData from "./data";
-import CollidingImg from "./CollidingImg";
+import { testimonialData } from "./data";
+import SlidingImg from "./SlidingImg";
 
 function Testimonial() {
   const [current, setCurrent] = useState(0);
@@ -19,7 +19,7 @@ function Testimonial() {
   return (
     <>
       <NormalHeading text="Testimonials" />
-      <CollidingImg />
+      <SlidingImg />
       <div className="mx-auto max-w-fit">
         <Fade key={current} duration={2000}>
           {" "}

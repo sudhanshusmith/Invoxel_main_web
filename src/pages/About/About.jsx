@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import line from "../../assets/projects/line.png";
 import CustomQuote from "../../components/Heading/CustomQuote";
 
@@ -29,6 +30,15 @@ function About() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
   return (
     <div className="flex flex-col items-center">
       <div className="w-[80%]">
@@ -88,7 +98,25 @@ function About() {
           <BlackLineHeading text1="Mission & Vision" text2="" />
         </div>
         <p className="text-justify mt-8 roboto">
-        Invoxel Technologies, born from the esteemed halls of IIT Delhi and led by one of its distinguished alumni, stands as an innovative force specialising in crafting bespoke B2B Immersive solutions for global enterprises. Our expertise lies in engineering computer-generated simulations, 3-D Scanning and immersive experiences that facilitate seamless interaction within three-dimensional environments. With a dedicated focus on Industry 4.0 solutions, we serve as catalysts in businesses' digital transformation journeys, offering comprehensive support in deploying cutting-edge Virtual Reality (VR), Augmented Reality (AR), and Immersive Digital Twin technologies. From digital twins to training simulators and smart visualization solutions, our repertoire spans a diverse spectrum of industries. Leveraging advanced technologies including VR, AR, 3D Scanning, Holography, and 3D Projection Mapping, we curate impeccable virtual environments tailored for industries, art, culture, heritage,  training, education, and beyond. Our mission is to elevate human interaction through immersive and captivating visual experiences, meticulously crafted by our seasoned experts proficient in designing, developing, and deploying VR and AR applications across various verticals.
+          Invoxel Technologies, born from the esteemed halls of IIT Delhi and
+          led by one of its distinguished alumni, stands as an innovative force
+          specialising in crafting bespoke B2B Immersive solutions for global
+          enterprises. Our expertise lies in engineering computer-generated
+          simulations, 3-D Scanning and immersive experiences that facilitate
+          seamless interaction within three-dimensional environments. With a
+          dedicated focus on Industry 4.0 solutions, we serve as catalysts in
+          businesses' digital transformation journeys, offering comprehensive
+          support in deploying cutting-edge Virtual Reality (VR), Augmented
+          Reality (AR), and Immersive Digital Twin technologies. From digital
+          twins to training simulators and smart visualization solutions, our
+          repertoire spans a diverse spectrum of industries. Leveraging advanced
+          technologies including VR, AR, 3D Scanning, Holography, and 3D
+          Projection Mapping, we curate impeccable virtual environments tailored
+          for industries, art, culture, heritage, training, education, and
+          beyond. Our mission is to elevate human interaction through immersive
+          and captivating visual experiences, meticulously crafted by our
+          seasoned experts proficient in designing, developing, and deploying VR
+          and AR applications across various verticals.
         </p>
 
         <NormalHeading text="Meet The Team" />

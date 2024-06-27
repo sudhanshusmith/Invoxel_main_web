@@ -24,10 +24,11 @@ function Navbar() {
 
   return (
     <div className="flex bg-white h-14 items-center sticky top-0 left-0 z-20 drop-shadow-xl">
-      {/* Adding Company name or logo here  */}
-      <div className="grow">
-        <img src={navlogo} className="h-8 ml-6"></img>
-      </div>
+      {!isDrawerOpen && (
+        <div className="grow">
+          <img src={navlogo} className="h-8 ml-6"></img>
+        </div>
+      )}
 
       {/* Navigation for laptop */}
       <div className=" flex  gap-x-12 pr-6 text-[#276dff]">
@@ -55,16 +56,18 @@ function Navbar() {
         <a href="#" className="hidden lg:block">
           OUR PRESENCE{" "}
         </a>
-        <a href="#" className="hidden lg:block">
+        <a href="#contact" className="hidden lg:block">
           CONTACT{" "}
         </a>
-        <div
-          href="#"
-          className="block lg:hidden"
-          onClick={() => setIsDrawerOpen(true)}
-        >
-          <img src={hamburger} alt="hamburger" className="w-8"></img>
-        </div>
+        {!isDrawerOpen && (
+          <div
+            href="#"
+            className="block lg:hidden"
+            onClick={() => setIsDrawerOpen(true)}
+          >
+            <img src={hamburger} alt="hamburger" className="w-8"></img>
+          </div>
+        )}
       </div>
 
       {/* Drawer Navigations are here  */}
@@ -75,7 +78,7 @@ function Navbar() {
             className="flex justify-between items-center pt-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            <img src={navlogo} alt="LOGO" className="h-9 ml-6"></img>
+            <img src={navlogo} alt="LOGO" className="h-8 ml-6"></img>
             <img
               src={cross}
               alt="Close Drawer"
@@ -131,10 +134,18 @@ function Navbar() {
             <hr className="h-[0.08rem] bg-[#C8BFBF] mt-[-0.7rem]"></hr>
           </div>
           <div className="gap-x-4 flex justify-center mb-6">
-            <img src={fb} className="w-10 object-contain" />
-            <img src={insta} className="w-10 object-contain" />
-            <img src={linkedin} className="w-10 object-contain" />
-            <img src={twitter} className="w-10 object-contain" />
+            <a href="https://www.facebook.com/Invoxel" target="_blank">
+              <img src={fb} className="w-10 object-contain" />
+            </a>
+            <a href="https://www.instagram.com/invoxel" target="_blank">
+              <img src={insta} className="w-10 object-contain" />
+            </a>
+            <a href="https://www.linkedin.com/company/invoxel/" target="_blank">
+              <img src={linkedin} className="w-10 object-contain" />
+            </a>
+            <a href="https://x.com/invoxel" target="_blank">
+              <img src={twitter} className="w-10 object-contain" />
+            </a>
           </div>
         </div>
       )}

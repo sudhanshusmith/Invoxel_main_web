@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import line from "../../../assets/projects/line.png";
 import CustomQuote from "../../../components/Heading/CustomQuote";
 
@@ -35,7 +36,19 @@ function About() {
 
         <div className="flex justify-center">
           <p className="text-justify mt-8 roboto">
-          Invoxel Technologies, born from the esteemed halls of IIT Delhi and led by one of its distinguished alumni, stands as an innovative force specialising in crafting bespoke B2B Immersive solutions for global enterprises. Our expertise lies in engineering computer-generated simulations, 3-D Scanning and immersive experiences that facilitate seamless interaction within three-dimensional environments. With a dedicated focus on Industry 4.0 solutions, we serve as catalysts in businesses' digital transformation journeys, offering comprehensive support in deploying cutting-edge Virtual Reality (VR), Augmented Reality (AR), and Immersive Digital Twin technologies. From digital twins to training simulators and smart visualization solutions, our repertoire spans a diverse spectrum of industries. 
+            Invoxel Technologies, born from the esteemed halls of IIT Delhi and
+            led by one of its distinguished alumni, stands as an innovative
+            force specialising in crafting bespoke B2B Immersive solutions for
+            global enterprises. Our expertise lies in engineering
+            computer-generated simulations, 3-D Scanning and immersive
+            experiences that facilitate seamless interaction within
+            three-dimensional environments. With a dedicated focus on Industry
+            4.0 solutions, we serve as catalysts in businesses' digital
+            transformation journeys, offering comprehensive support in deploying
+            cutting-edge Virtual Reality (VR), Augmented Reality (AR), and
+            Immersive Digital Twin technologies. From digital twins to training
+            simulators and smart visualization solutions, our repertoire spans a
+            diverse spectrum of industries.
           </p>
         </div>
         {isMobile ? (
@@ -60,9 +73,12 @@ function About() {
         </div>
 
         <div className="flex justify-center mt-5 xl:mt-10">
-          <button className="bg-[#276DFF] text-white font-medium rounded-lg px-8 py-3 mt-4">
+          <Link
+            to="/about"
+            className="bg-[#276DFF] text-white font-medium rounded-lg px-8 py-3 mt-4"
+          >
             Read More About Us
-          </button>
+          </Link>
         </div>
       </div>
     </div>

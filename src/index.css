@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* unknown css variables are below */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -74,5 +80,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-

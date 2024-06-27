@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Client from "./Client";
 import Connect from "./Connect";
@@ -17,20 +18,23 @@ import Testimonial from "./Testimonial/Testimonial";
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    // Function to update state based on viewport width
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' 
+    });
+  }, [pathname]);
+
+  useEffect(() => {
     function handleResize() {
       setIsMobile(window.innerWidth <= 768);
     }
 
-    // Initial call to set state based on viewport width
     handleResize();
 
-    // Event listener to update state on viewport width change
     window.addEventListener("resize", handleResize);
-
-    // Cleanup function to remove event listener
     return () => {
       window.removeEventListener("resize", handleResize);
     };
