@@ -39,7 +39,7 @@ const SlidingImg = () => {
         .animate-scroll {
           display: flex;
           width: calc(200px * ${images.length});
-          animation: scroll 700s linear infinite;
+          animation: scroll 7000s linear infinite;
         }
       `}</style>
     </div>
