@@ -19,7 +19,7 @@ import image18 from "../../../assets/projects/rsm/18.png";
 import section_img from "../../../assets/projects/section_img.png";
 
 const content = {
-  title: "Aero SHOW",
+  title: "Oil India limited",
   about: {
     heading: "Digital Pavillion",
     description: `Rashtriya Sanskritik Mahotsava, a nine-day cultural extravaganza, stood as a testament to India's rich heritage and diverse cultural tapestry. Visitors experienced an Extraordinary Journey into India's Spiritual and Cultural Heritage. The crowd embarked on a transformative voyage through the heart of India's rich tapestry of culture and religion. "Indian Postal Stamps of Culture and Religion" showcased in VR helped witnessing the spiritual legacy and vibrant traditions that have shaped the subcontinent for millennia.`,

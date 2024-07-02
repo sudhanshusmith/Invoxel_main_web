@@ -18,7 +18,7 @@
     "framer-motion-3d": "^11.0.12",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
-    "react-awesome-reveal": "^4.2.8",
+    "react-awesome-reveal": "^4.2.12",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-slick": "^0.30.2",

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import section_img from "../../../assets/projects/section_img.png";
 import data from "./data";
 import line_white from "../../../assets/projects/line_white.png";
@@ -16,8 +17,9 @@ function Presence() {
         <div className="grid grid-cols-2 gap-4 w-[80%]">
           {data.map((point, index) => (
             <>
-              <div
-                className={`col-span-2 lg:col-span-1 mt-10 flex lg:justify-${
+              <Link
+                to={point.redirect}
+                className={`col-span-2 lg:col-span-1 mt-10 flex  lg:justify-${
                   index % 2 == 0 ? "end" : "start"
                 }`}
               >
@@ -43,7 +45,7 @@ function Presence() {
                     description={point.description}
                   />
                 </div>
-              </div>
+              </Link>
             </>
           ))}
         </div>

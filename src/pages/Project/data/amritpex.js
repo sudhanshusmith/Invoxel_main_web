@@ -1,8 +1,32 @@
+import image1 from "../../../assets/projects/amritpex/1.png";
+import image2 from "../../../assets/projects/amritpex/2.png";
+import image3 from "../../../assets/projects/amritpex/3.png";
+import image4 from "../../../assets/projects/amritpex/4.png";
+import image5 from "../../../assets/projects/amritpex/5.png";
+import image6 from "../../../assets/projects/amritpex/6.png";
+import image7 from "../../../assets/projects/amritpex/7.png";
+import image8 from "../../../assets/projects/amritpex/8.png";
+import image9 from "../../../assets/projects/amritpex/9.png";
+import image10 from "../../../assets/projects/amritpex/10.png";
+import image11 from "../../../assets/projects/amritpex/11.png";
+import image12 from "../../../assets/projects/amritpex/12.png";
+import image13 from "../../../assets/projects/amritpex/13.png";
+import image14 from "../../../assets/projects/amritpex/14.png";
+import image15 from "../../../assets/projects/amritpex/15.png";
+import image16 from "../../../assets/projects/amritpex/16.png";
+import image17 from "../../../assets/projects/amritpex/17.png";
+import image18 from "../../../assets/projects/amritpex/18.png";
+
 const content = {
-  title: "Amritpex 2023",
-  description:
-    "Mohandas Karamchand Gandhi was an Indian lawyer, anti-colonial nationalist, and political ethicist, who employed nonviolent resistance to lead the successful campaign for India",
-  iframeLink: "https://www.youtube.com/embed/H6xjqywgmwk?si=ueTAM_v1FGcS8gxu",
+  title: "amritpex 2023",
+  about: {
+    heading: "Digital Pavillion",
+    description: `We curated and demonstrated an immersive virtual museum showcasing the world of postal stamps, Cultural heritage, history, nature, and wildlife in virtual reality to The Honourable Minister Shri Ashwin Vaishnav, Minister of Railways, Communications and Electronics & Information Technology at Amritpex 2023, New Delhi. "Indian Postal Stamps of Space and Technology" brings the marvels of the universe and the forefront of technology right to your fingertips. Awe-Inspiring Stamp Collection: Encounter a curated selection of Indian postage stamps celebrating the rich tapestry of wildlife that graces the subcontinent. An Extraordinary Journey into India's Spiritual and Cultural Heritage Embark on a transformative voyage through the heart of India's rich tapestry of culture and religion.`,
+  },
+  video: {
+    provider: "youtube",
+    iframeLink: "https://www.youtube.com/embed/H6xjqywgmwk?si=ueTAM_v1FGcS8gxu",
+  },
 
   section: {
     title: "Interactive Surfaces",
@@ -48,14 +72,24 @@ const content = {
   gallery: {
     title: "Photo Gallery",
     images: [
-      "https://i.ibb.co/7yjvZ1v/gandhi-1.jpg",
-      "https://i.ibb.co/7yjvZ1v/gandhi-2.jpg",
-      "https://i.ibb.co/7yjvZ1v/gandhi-3.jpg",
-      "https://i.ibb.co/7yjvZ1v/gandhi-4.jpg",
-      "https://i.ibb.co/7yjvZ1v/gandhi-4.jpg",
-      "https://i.ibb.co/7yjvZ1v/gandhi-4.jpg",
-      "https://i.ibb.co/7yjvZ1v/gandhi-4.jpg",
-      "https://i.ibb.co/7yjvZ1v/gandhi-4.jpg",
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
+      image7,
+      image8,
+      image9,
+      image10,
+      image11,
+      image12,
+      image13,
+      image14,
+      image15,
+      image16,
+      image17,
+      image18,
     ],
   },
 };
