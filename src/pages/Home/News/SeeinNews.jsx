@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import NormalHeading from "../../../components/Heading/NormalHeading";
-import news1 from "../../../assets/home/news/news1.png";
-
-const news = [news1, news1, news1, news1];
+import redirect from "../../../assets/home/news/redirect.png";
+import { newsData } from "./data";
+import { red } from "@mui/material/colors";
+import { Link } from "react-router-dom";
 
 function SeeinNews() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -46,18 +47,32 @@ function SeeinNews() {
       <div className="py-8 relative">
         <Slider ref={sliderRef} {...settings}>
           {Array.from({ length: 4 }, (_, i) => i + 1).map((item) => (
-            <div key={item} className="px-2 outline-none">
+            <Link
+              to={newsData[item - 1].url}
+              target="_blank"
+              key={item}
+              className="px-3 outline-none relative aspect-video"
+            >
               <img
-                src={news[item - 1]}
-                alt={`News ${item}`}
-                className="w-full h-auto block"
+                src={newsData[item - 1].image}
+                alt={`News ${item - 1}`}
+                className="w-full h-auto block custom_box_shadow rounded-lg"
               />
-              {/* <p className="text-center mt-2">News {item}</p> */}
-            </div>
+              <div className="absolute bottom-0 lg:bottom-1 left-0 right-0 bg-white m-5 lg:m-6 p-2 lg:p-4 rounded-md custom_box_shadow">
+                <p className="text-sm lg:text-xl font-bold truncate">
+                  {newsData[item - 1].title}
+                </p>
+                <p className="text-xs lg:text-base font-thin turncate_two_lines">
+                  {newsData[item - 1].description}
+                </p>
+              </div>
+
+              <img src={redirect} className="absolute top-2 right-6" />
+            </Link>
           ))}
         </Slider>
         <div className="carousel-indicators absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2">
-          {news.map((_, index) => (
+          {newsData.map((_, index) => (
             <span
               key={index}
               className={`inline-block w-2 h-2 rounded-full mx-1 cursor-pointer ${
