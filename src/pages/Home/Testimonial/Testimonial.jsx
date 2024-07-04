@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import NormalHeading from "../../../components/Heading/NormalHeading";
-import all_testimonials from "../../../assets/home/testimonial/all.png";
 import TestimaonialQuote from "../../../components/Heading/TestimaonialQuote";
+import meghwal_review from "../../../assets/home/testimonial/content/meghwal_review.png";
 import { testimonialData } from "./data";
 import SlidingImg from "./SlidingImg";
 
@@ -24,11 +24,15 @@ function Testimonial() {
         <Fade key={current} duration={2000}>
           {" "}
           {/* Add key to Fade component */}
-          <TestimaonialQuote
-            name={testimonialData[current].name}
-            text={testimonialData[current].text}
-            emoji={testimonialData[current].emoji}
-          />
+          {current == 2 ? (
+            <img src={meghwal_review} className="p-4" />
+          ) : (
+            <TestimaonialQuote
+              name={testimonialData[current].name}
+              text={testimonialData[current].text}
+              emoji={testimonialData[current].emoji}
+            />
+          )}
         </Fade>
       </div>
     </>
