@@ -1,21 +1,6 @@
-import image1 from "../../../assets/projects/rsm/1.png";
-import image2 from "../../../assets/projects/rsm/2.png";
-import image3 from "../../../assets/projects/rsm/3.png";
-import image4 from "../../../assets/projects/rsm/4.png";
-import image5 from "../../../assets/projects/rsm/5.png";
-import image6 from "../../../assets/projects/rsm/6.png";
-import image7 from "../../../assets/projects/rsm/7.png";
-import image8 from "../../../assets/projects/rsm/8.png";
-import image9 from "../../../assets/projects/rsm/9.png";
-import image10 from "../../../assets/projects/rsm/10.png";
-import image11 from "../../../assets/projects/rsm/11.png";
-import image12 from "../../../assets/projects/rsm/12.png";
-import image13 from "../../../assets/projects/rsm/13.png";
-import image14 from "../../../assets/projects/rsm/14.png";
-import image15 from "../../../assets/projects/rsm/15.png";
-import image16 from "../../../assets/projects/rsm/16.png";
-import image17 from "../../../assets/projects/rsm/17.png";
-import image18 from "../../../assets/projects/rsm/18.png";
+import image1 from "../../../assets/projects/audi/1.png";
+import image2 from "../../../assets/projects/audi/2.png";
+import image3 from "../../../assets/projects/audi/3.png";
 import section_img from "../../../assets/projects/section_img.png";
 
 const content = {
@@ -72,7 +57,7 @@ const content = {
 
   gallery: {
     title: "Photo Gallery",
-    images: Array(18).fill(section_img),
+    images: [image1, image2, image3],
   },
 };
 export default content;

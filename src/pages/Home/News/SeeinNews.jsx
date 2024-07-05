@@ -46,12 +46,12 @@ function SeeinNews() {
       <NormalHeading text="See Us In the News" />
       <div className="py-8 relative">
         <Slider ref={sliderRef} {...settings}>
-          {Array.from({ length: 4 }, (_, i) => i + 1).map((item) => (
+          {Array.from({ length: 16 }, (_, i) => i + 1).map((item) => (
             <Link
               to={newsData[item - 1].url}
               target="_blank"
               key={item}
-              className="px-3 outline-none relative aspect-video"
+              className="p-3 outline-none relative aspect-video"
             >
               <img
                 src={newsData[item - 1].image}
@@ -67,7 +67,10 @@ function SeeinNews() {
                 </p>
               </div>
 
-              <img src={redirect} className="absolute top-2 right-6" />
+              <img
+                src={redirect}
+                className="h-4 lg:h-6 absolute top-6 right-7"
+              />
             </Link>
           ))}
         </Slider>
