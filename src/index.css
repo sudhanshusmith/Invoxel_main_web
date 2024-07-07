@@ -6,6 +6,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Fonts css  */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto Serif", serif;
+}
+
 /* unknown css variables are below */
 
 @layer base {
@@ -110,10 +119,12 @@ html {
 
 /* NEWS Images css */
 
-.custom_box_shadow {
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+.custom_image_shadow {
+  box-shadow: 0px 1px 21px 3px rgba(0, 0, 0, 0.19);
 }
-
+.custom_box_shadow {
+  box-shadow: 3px 1px 8px 0px rgba(0, 0, 0, 0.25);
+}
 
 .turncate_two_lines {
   display: -webkit-box;

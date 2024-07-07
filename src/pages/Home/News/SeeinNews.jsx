@@ -44,37 +44,37 @@ function SeeinNews() {
   return (
     <>
       <NormalHeading text="See Us In the News" />
-      <div className="py-8 relative">
+      <div className="py-10 relative">
         <Slider ref={sliderRef} {...settings}>
           {Array.from({ length: 16 }, (_, i) => i + 1).map((item) => (
             <Link
               to={newsData[item - 1].url}
               target="_blank"
               key={item}
-              className="p-3 outline-none relative aspect-video"
+              className="py-10 px-3 lg:px-7 outline-none rounded-lg relative aspect-video border- border-red-500"
             >
               <img
                 src={newsData[item - 1].image}
                 alt={`News ${item - 1}`}
-                className="w-full h-auto block custom_box_shadow rounded-lg"
+                className="w-full h-auto block custom_image_shadow rounded-lg border- border-green-500"
               />
-              <div className="absolute bottom-0 lg:bottom-1 left-0 right-0 bg-white m-5 lg:m-6 p-2 lg:p-4 rounded-md custom_box_shadow">
-                <p className="text-sm lg:text-xl font-bold truncate">
+              <div className="absolute bottom-12 lg:bottom-16 left-0 right-0 bg-white mx-5 lg:mx-16 p-2 lg:p-3 rounded-md custom_box_shadow">
+                <p className="text-sm lg:text-xl font-semibold truncate lg:pr-28 pb-1">
                   {newsData[item - 1].title}
                 </p>
-                <p className="text-xs lg:text-base font-thin turncate_two_lines">
+                <p className="text-xs lg:text-base font-light turncate_two_lines">
                   {newsData[item - 1].description}
                 </p>
               </div>
 
               <img
                 src={redirect}
-                className="h-4 lg:h-6 absolute top-6 right-7"
+                className="h-4 lg:h-6 absolute top-14 right-5 lg:right-14"
               />
             </Link>
           ))}
         </Slider>
-        <div className="carousel-indicators absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2">
+        <div className="carousel-indicators absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2 ">
           {newsData.map((_, index) => (
             <span
               key={index}
