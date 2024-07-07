@@ -9,10 +9,6 @@ const content = {
     heading: "Digital Pavillion",
     description: `Rashtriya Sanskritik Mahotsava, a nine-day cultural extravaganza, stood as a testament to India's rich heritage and diverse cultural tapestry. Visitors experienced an Extraordinary Journey into India's Spiritual and Cultural Heritage. The crowd embarked on a transformative voyage through the heart of India's rich tapestry of culture and religion. "Indian Postal Stamps of Culture and Religion" showcased in VR helped witnessing the spiritual legacy and vibrant traditions that have shaped the subcontinent for millennia.`,
   },
-  video: {
-    provider: "youtube",
-    iframeLink: "https://www.youtube.com/embed/H6xjqywgmwk?si=ueTAM_v1FGcS8gxu",
-  },
 
   section: {
     title: "Interactive Surfaces",

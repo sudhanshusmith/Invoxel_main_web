@@ -122,7 +122,7 @@ function Project() {
         <div className="flex flex-col items-center border">
           <div className=" w-[80%]">
             <ProjectHeading text={data.title} />
-            {data.video.provider === "youtube" ? (
+            {data.video?.provider === "youtube" ? (
               <YTvideo iframeLink={data.video.iframeLink}></YTvideo>
             ) : (
               <></>

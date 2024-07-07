@@ -12,7 +12,7 @@ const content = {
   },
   video: {
     provider: "youtube",
-    iframeLink: "https://www.youtube.com/embed/H6xjqywgmwk?si=ueTAM_v1FGcS8gxu",
+    iframeLink: "https://www.youtube.com/embed/x4UPJASAmcQ?si=1v6wdxuERmkPJpQk",
   },
 
   section: {

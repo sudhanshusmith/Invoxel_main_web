@@ -15,6 +15,16 @@ import galleryp2 from "../../../assets/home/hero/phone/2.png";
 import galleryp3 from "../../../assets/home/hero/phone/3.png";
 import galleryp4 from "../../../assets/home/hero/phone/4.png";
 import galleryp5 from "../../../assets/home/hero/phone/5.png";
+import lg1 from "../../../assets/home/hero/lg/1.png";
+import lg2 from "../../../assets/home/hero/lg/2.png";
+import lg3 from "../../../assets/home/hero/lg/3.png";
+import lg4 from "../../../assets/home/hero/lg/4.png";
+import lg5 from "../../../assets/home/hero/lg/5.png";
+import xl1 from "../../../assets/home/hero/xl/1.png";
+import xl2 from "../../../assets/home/hero/xl/2.png";
+import xl3 from "../../../assets/home/hero/xl/3.png";
+import xl4 from "../../../assets/home/hero/xl/4.png";
+import xl5 from "../../../assets/home/hero/xl/5.png";
 
 import fb from "../../../assets/social/fb-f.png";
 import insta from "../../../assets/social/insta-f.png";
@@ -24,11 +34,17 @@ import twitter from "../../../assets/social/twitter-f.png";
 const Carousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isTablet, setIsTablet] = useState(window.innerWidth <= 1000);
+  const [isLg, setIsLg] = useState(window.innerWidth >= 1200);
+  const [isXl, setIsXl] = useState(window.innerWidth >= 1500);
   const sliderRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth <= 768);
+      setIsTablet(window.innerWidth <= 1000);
+      setIsLg(window.innerWidth >= 1200);
+      setIsXl(window.innerWidth >= 1500);
     };
 
     window.addEventListener("resize", handleResize);
@@ -50,9 +66,19 @@ const Carousel = () => {
     },
   };
 
-  const imagesDesktop = [gallery1, gallery2, gallery3, gallery4, gallery5];
-  const imagesMobile = [galleryp1, galleryp2, galleryp3, galleryp4, galleryp5];
-  const images = isMobile ? imagesMobile : imagesDesktop;
+  const getHeroImage = () => {
+    if (isMobile)
+      return [galleryp1, galleryp2, galleryp3, galleryp4, galleryp5];
+    if (isTablet) return [gallery1, gallery2, gallery3, gallery4, gallery5];
+    // if (isXl) return [xl1, xl2, xl3, xl4, xl5];
+    // if (isLg) return [lg1, lg2, lg3, lg4, lg5];
+
+    return [xl1, xl2, xl3, xl4, xl5];
+  };
+  const images = getHeroImage();
+  // const imagesDesktop = ;
+  // const imagesMobile = ;
+  // const images = isMobile ? imagesMobile : imagesDesktop;
 
   return (
     <div className="carousel-container relative">
@@ -89,7 +115,7 @@ const Carousel = () => {
           </div>
         ))}
       </Slider>
-      <div className="carousel-indicators absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2">
+      <div className="carousel-indicators absolute bottom-[10px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2">
         {images.map((_, index) => (
           <span
             key={index}

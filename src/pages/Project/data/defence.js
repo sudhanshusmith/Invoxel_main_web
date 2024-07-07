@@ -25,7 +25,7 @@ const content = {
   },
   video: {
     provider: "youtube",
-    iframeLink: "https://www.youtube.com/embed/H6xjqywgmwk?si=ueTAM_v1FGcS8gxu",
+    iframeLink: "https://www.youtube.com/embed/5XMh0VUfaMY?si=QBUH-cEpzEXfE__c",
   },
 
   section: {

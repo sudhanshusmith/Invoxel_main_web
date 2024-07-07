@@ -1,21 +1,24 @@
-import image1 from "../../../assets/projects/rsm/1.png";
-import image2 from "../../../assets/projects/rsm/2.png";
-import image3 from "../../../assets/projects/rsm/3.png";
-import image4 from "../../../assets/projects/rsm/4.png";
-import image5 from "../../../assets/projects/rsm/5.png";
-import image6 from "../../../assets/projects/rsm/6.png";
-import image7 from "../../../assets/projects/rsm/7.png";
-import image8 from "../../../assets/projects/rsm/8.png";
-import image9 from "../../../assets/projects/rsm/9.png";
-import image10 from "../../../assets/projects/rsm/10.png";
-import image11 from "../../../assets/projects/rsm/11.png";
-import image12 from "../../../assets/projects/rsm/12.png";
-import image13 from "../../../assets/projects/rsm/13.png";
-import image14 from "../../../assets/projects/rsm/14.png";
-import image15 from "../../../assets/projects/rsm/15.png";
-import image16 from "../../../assets/projects/rsm/16.png";
-import image17 from "../../../assets/projects/rsm/17.png";
-import image18 from "../../../assets/projects/rsm/18.png";
+import image1 from "../../../assets/projects/aero/1.JPG";
+import image2 from "../../../assets/projects/aero/2.JPG";
+import image3 from "../../../assets/projects/aero/3.JPG";
+import image4 from "../../../assets/projects/aero/4.JPG";
+import image5 from "../../../assets/projects/aero/5.JPG";
+import image6 from "../../../assets/projects/aero/6.JPG";
+import image7 from "../../../assets/projects/aero/7.JPG";
+import image8 from "../../../assets/projects/aero/8.JPG";
+import image9 from "../../../assets/projects/aero/9.JPG";
+import image10 from "../../../assets/projects/aero/10.JPG";
+import image11 from "../../../assets/projects/aero/11.JPG";
+import image12 from "../../../assets/projects/aero/12.JPG";
+import image13 from "../../../assets/projects/aero/13.JPG";
+import image14 from "../../../assets/projects/aero/14.JPG";
+import image15 from "../../../assets/projects/aero/15.JPG";
+import image16 from "../../../assets/projects/aero/16.JPG";
+import image17 from "../../../assets/projects/aero/17.JPG";
+import image18 from "../../../assets/projects/aero/18.JPG";
+import image19 from "../../../assets/projects/aero/19.JPG";
+import image20 from "../../../assets/projects/aero/20.JPG";
+
 import section_img from "../../../assets/projects/section_img.png";
 
 const content = {
@@ -26,7 +29,7 @@ const content = {
   },
   video: {
     provider: "youtube",
-    iframeLink: "https://www.youtube.com/embed/H6xjqywgmwk?si=ueTAM_v1FGcS8gxu",
+    iframeLink: "https://www.youtube.com/embed/ET7dFwEptl8?si=kVsByXI3NV71mf_D",
   },
 
   section: {
@@ -72,7 +75,28 @@ const content = {
 
   gallery: {
     title: "Photo Gallery",
-    images: Array(18).fill(section_img),
+    images: [
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
+      image7,
+      image8,
+      image9,
+      image10,
+      image11,
+      image12,
+      image13,
+      image14,
+      image15,
+      image16,
+      image17,
+      image18,
+      image19,
+      image20,
+    ],
   },
 };
 export default content;

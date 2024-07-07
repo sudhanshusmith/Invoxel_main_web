@@ -16,7 +16,7 @@ const SlidingImg = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="flex-none h-24 transform transition-transform hover:scale-110"
+              className="flex-none h-36 transform transition-transform hover:scale-110"
             >
               <img
                 src={image}

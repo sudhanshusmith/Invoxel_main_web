@@ -55,7 +55,8 @@ const data = [
     title1: "Audi India",
     title2: "",
     redirect: "/projects/audi",
-    description: "",
+    description:
+      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
   },
   {
     image: presence7,
@@ -70,7 +71,8 @@ const data = [
     title1: "Petronet LNG Limited",
     title2: "",
     redirect: "/projects/lng",
-    description: "",
+    description:
+      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
   },
   {
     image: presence9,
@@ -85,7 +87,8 @@ const data = [
     title1: "Protiviti",
     title2: "",
     redirect: "/projects/protiviti",
-    description: "",
+    description:
+      "Every experience we deliver is tailored, unique and custom-built to fit your needs. Our team of experts works with you to understand your strategic edge and comes up with solutions that will exceed your expectations.",
   },
 ];
 
