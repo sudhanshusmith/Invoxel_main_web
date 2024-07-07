@@ -89,7 +89,7 @@ const Carousel = () => {
           </div>
         ))}
       </Slider>
-      <div className="carousel-indicators absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2">
+      <div className="carousel-indicators absolute bottom-[10px] left-1/2 transform -translate-x-1/2 z-10 px-5 py-2">
         {images.map((_, index) => (
           <span
             key={index}
