@@ -75,11 +75,16 @@ const Carousel = () => {
 
       <Slider ref={sliderRef} {...settings}>
         {images.map((src, index) => (
-          <div key={index} className="w-screen h-screen">
+          <div
+            key={index}
+            className="w-screen"
+            style={{ height: "calc(100vh - 3.5rem)" }}
+          >
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-screen h-screen object-cover"
+              className="w-screen object-cover"
+              style={{ height: "calc(100vh - 3.5rem)" }}
             />
           </div>
         ))}
