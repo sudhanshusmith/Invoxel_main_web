@@ -76,9 +76,6 @@ const Carousel = () => {
     return [xl1, xl2, xl3, xl4, xl5];
   };
   const images = getHeroImage();
-  // const imagesDesktop = ;
-  // const imagesMobile = ;
-  // const images = isMobile ? imagesMobile : imagesDesktop;
 
   return (
     <div className="carousel-container relative">
