@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.rb {
+  border: 2px solid red;
+}
+
 /* Fonts css  */
 body {
   font-family: "Inter", sans-serif;

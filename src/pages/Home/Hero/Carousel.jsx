@@ -5,26 +5,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Assuming the imports for images are correct and paths are valid
-import gallery1 from "../../../assets/home/hero/desktop/1.png";
-import gallery2 from "../../../assets/home/hero/desktop/2.png";
-import gallery3 from "../../../assets/home/hero/desktop/3.png";
-import gallery4 from "../../../assets/home/hero/desktop/4.png";
+import gallery1 from "../../../assets/home/hero/desktop/1.jpg";
+import gallery2 from "../../../assets/home/hero/desktop/2.jpg";
+import gallery3 from "../../../assets/home/hero/desktop/3.jpg";
+import gallery4 from "../../../assets/home/hero/desktop/4.jpg";
 import gallery5 from "../../../assets/home/hero/desktop/5.png";
-import galleryp1 from "../../../assets/home/hero/phone/1.png";
-import galleryp2 from "../../../assets/home/hero/phone/2.png";
-import galleryp3 from "../../../assets/home/hero/phone/3.png";
-import galleryp4 from "../../../assets/home/hero/phone/4.png";
+import galleryp1 from "../../../assets/home/hero/phone/1.jpg";
+import galleryp2 from "../../../assets/home/hero/phone/2.jpg";
+import galleryp3 from "../../../assets/home/hero/phone/3.jpg";
+import galleryp4 from "../../../assets/home/hero/phone/4.jpg";
 import galleryp5 from "../../../assets/home/hero/phone/5.png";
-import lg1 from "../../../assets/home/hero/lg/1.png";
-import lg2 from "../../../assets/home/hero/lg/2.png";
-import lg3 from "../../../assets/home/hero/lg/3.png";
-import lg4 from "../../../assets/home/hero/lg/4.png";
-import lg5 from "../../../assets/home/hero/lg/5.png";
-import xl1 from "../../../assets/home/hero/xl/1.png";
-import xl2 from "../../../assets/home/hero/xl/2.png";
-import xl3 from "../../../assets/home/hero/xl/3.png";
-import xl4 from "../../../assets/home/hero/xl/4.png";
-import xl5 from "../../../assets/home/hero/xl/5.png";
 
 import fb from "../../../assets/social/fb-f.png";
 import insta from "../../../assets/social/insta-f.png";
@@ -69,18 +59,14 @@ const Carousel = () => {
   const getHeroImage = () => {
     if (isMobile)
       return [galleryp1, galleryp2, galleryp3, galleryp4, galleryp5];
-    if (isTablet) return [gallery1, gallery2, gallery3, gallery4, gallery5];
-    // if (isXl) return [xl1, xl2, xl3, xl4, xl5];
-    // if (isLg) return [lg1, lg2, lg3, lg4, lg5];
-
-    return [xl1, xl2, xl3, xl4, xl5];
+    else return [gallery1, gallery2, gallery3, gallery4, gallery5];
   };
   const images = getHeroImage();
 
   return (
     <div className="carousel-container relative">
       {!isMobile && (
-        <div className="social-icons">
+        <div className="social-icons bg-[#276DFF] px-3 rounded-tr-2xl rounded-br-2xl ">
           <a href="https://www.facebook.com/Invoxel" target="_blank">
             <img src={fb} className="w-8 object-contain" />
           </a>
